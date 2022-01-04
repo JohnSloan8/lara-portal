@@ -1,8 +1,5 @@
 <?php
 
-echo "john testing";
-echo ROOT;
-
 require_once  ROOT . 'SharedModules/InputValidation.class.php';
 
 class DataMember extends InputValidation{

@@ -15,6 +15,7 @@
 <body>
 
 <?php
+echo "Hello there";
 require 'header.html';
 require_once '../Config.php';
 ?>
