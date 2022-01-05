@@ -15,6 +15,7 @@ $(document).ready(function(){
 
         var form = $(this);
         var url = form.attr('action');
+        console.log('url:', url)
         var type = form.attr('method');
         var data = form.serialize()  + "&task=userLogin";
 

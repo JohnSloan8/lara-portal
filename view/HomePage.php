@@ -16,9 +16,6 @@ require_once '../Config.php';
 </head>
 
 <body>
-<?php
-    echo '<pre>'; print_r($_SESSION); echo '</pre>'
-?>
 <div  class="homePageHeader">
     <header>
         <div class="headerLogout">

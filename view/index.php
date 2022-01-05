@@ -15,9 +15,9 @@
 <body>
 
 <?php
-echo "Hello there";
 require 'header.html';
 require_once '../Config.php';
+console_log('hee hee');
 ?>
 
     <main>

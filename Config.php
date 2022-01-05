@@ -6,6 +6,15 @@
  * Time: 09:48 PM
  */
 session_start();
+function console_log($output, $with_script_tags = true) {
+    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) .
+');';
+    if ($with_script_tags) {
+        $js_code = '<script>' . $js_code . '</script>';
+    }
+    echo $js_code;
+}
+
 
 define("LaraEnv", "LARA='/home/john/johnsHDD/work/LARA/LARA-source/callector-lara-svn/trunk'");
 define("TreeTaggerEnv", "TREETAGGER='/usr/local/TreeTagger'");
@@ -41,7 +50,7 @@ define("LaraLDT", array (
     'password' => 'blahblah'
 ));
 
-define("ROOT", "/home/john/johnsHDD/work/LARA/LARA-source/callector-lara-svn/trunk/Code/PHP/");
+define("ROOT", "/opt/lampp/htdocs/lara-portal/");
 define("PythonDir","/home/john/johnsHDD/work/LARA/LARA-source/callector-lara-svn/trunk/Code/Python/");
 
 define("LaraContentDir","/export/data/www/LARA-data/");
