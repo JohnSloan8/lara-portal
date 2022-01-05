@@ -17,7 +17,9 @@ $(document).ready(function(){
         var url = form.attr('action');
         console.log('url:', url)
         var type = form.attr('method');
+        console.log('type:', type)
         var data = form.serialize()  + "&task=userLogin";
+        console.log('data:', data)
 
 
         if($("#UserNameEmail").val().length === 0 ||
@@ -25,16 +27,18 @@ $(document).ready(function(){
             $('#loginResponseMsg').text("Please insert your Email/Username and Password.");
             hideError("#loginResponseMsg", 2000);
 
-           //alert("Please insert your Email/Username and Password.");
+           alert("Please insert your Email/Username and Password.");
            return;
         }
 
 
         $.ajax({
+
             type: type,
             url: url,
             data: data, // serializes the form's elements.
             success: function(response) {
+                console.log('success response:', response)
                 if (response.indexOf("UserNotFound") != -1)
                 {
                     $('#loginResponseMsg').text("User not found.");
@@ -50,6 +54,11 @@ $(document).ready(function(){
                 {
                     window.location = "../view/HomePage.php";
                 }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log('jqXHR:', jqXHR);
+                console.log('textStatus:', textStatus);
+                console.log('errorThrown:', errorThrown);
             }
         });
 

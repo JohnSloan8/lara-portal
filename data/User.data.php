@@ -8,8 +8,10 @@
 
 require_once '../class/Account.class.php';
 require_once '../class/PasswordReset.class.php';
+require_once '../Config.php';
 
 $task = isset($_REQUEST["task"]) ? $_REQUEST["task"] :  "";
+console_log($task);
 
 switch ($task)
 {

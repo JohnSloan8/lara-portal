@@ -40,8 +40,8 @@ define("SessionIndex", array (
 
 define("LaraDB", array("driver" => 'mysql',
     "host" => '127.0.0.1',
-    "user" => 'laraportaluser',
-    "pass" => 'blahblah',
+    "user" => 'root',
+    "pass" => '',
     "database" => 'LARA-portal'));
 
 define("LaraLDT", array (
